@@ -63,7 +63,7 @@ function Home() {
                 </div>
               </div>
               <div className="col">
-                <img src="/react-weather-app/Images/wind.png" alt="" />
+                <img src="/react-weather-app/public/Images/wind.png" alt="" />
                 <div className="wind">
                   <p>{Math.round(data.speed)} km/h</p>
                   <p>Wind</p>
