@@ -47,7 +47,7 @@ function Home() {
               onChange={(e) => setName(e.target.value)}
             />
             <button>
-              <img src="/react-weather-app/Images/search.png" onClick={handleClick} alt="" />
+              <img src="/Images/search.png" onClick={handleClick} alt="" />
             </button>
           </div>
           <div className="weather-info">
