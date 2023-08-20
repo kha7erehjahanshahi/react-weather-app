@@ -47,23 +47,23 @@ function Home() {
               onChange={(e) => setName(e.target.value)}
             />
             <button>
-              <img src="/Images/search.png" onClick={handleClick} alt="" />
+            <img src="/react-weather-app/Images/search.png" onClick={handleClick} alt="" />
             </button>
           </div>
           <div className="weather-info">
-            <img className="icon" src={`/Images/${data.image}.png`} alt="" />
+          <img className="icon" src={`/react-weather-app/Images/${data.image}.png`} alt="" />
             <h1>{Math.round(data.celcius)}°C</h1>
             <h2>{data.name}</h2>
             <div className="details">
               <div className="col">
-                <img src="./Images/humidity.png" alt="" />
+              <img src="/react-weather-app/Images/humidity.png" alt="" />
                 <div className="humidity">
                   <p>{Math.round(data.humidity)}%</p>
                   <p>Humidity</p>
                 </div>
               </div>
-              <div className="col">
-                <img src="/Images/wind.png" alt="" />
+              <div className="col">          
+                <img src="/react-weather-app/Images/wind.png" alt="" />
                 <div className="wind">
                   <p>{Math.round(data.speed)} km/h</p>
                   <p>Wind</p>
