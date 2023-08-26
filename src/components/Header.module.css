@@ -1,0 +1,19 @@
+.header_container {
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 30px; */
+  @apply flex justify-start items-center gap-[5px] pb-[30px];
+}
+
+.header_container img {
+  /* width: 40px;
+  height: 40px; */
+  @apply w-[40px] h-[40px];
+}
+.header_title {
+  /* font-size: 20px;
+  color: #ffffff; */
+  @apply text-xl text-white;
+}

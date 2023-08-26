@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "./Header";
-import "./Home.css";
+import styles from "./Home.module.css";
 import getWeather from "./api";
 
 function Home() {
@@ -37,10 +37,10 @@ function Home() {
 
   return (
     <>
-      <div className="container">
-        <div className="weather">
+      <div className={styles.container}>
+        <div className={styles.weather}>
           <Header />
-          <div className="search">
+          <div className={styles.search}>
             <input
               type="text"
               placeholder="Enter City Name"
@@ -54,25 +54,25 @@ function Home() {
               />
             </button>
           </div>
-          <div className="weather-info">
+          <div className={styles.weather_info}>
             <img
-              className="icon"
+              className={styles.icon}
               src={`/react-weather-app/Images/${data.image}.png`}
               alt=""
             />
             <h1>{Math.round(data.celcius)}°C</h1>
             <h2>{data.name}</h2>
-            <div className="details">
-              <div className="col">
+            <div className={styles.details}>
+            <div className={styles.col}>
                 <img src="/react-weather-app/Images/humidity.png" alt="" />
-                <div className="humidity">
+                <div className={styles.humidity}>
                   <p>{Math.round(data.humidity)}%</p>
                   <p>Humidity</p>
                 </div>
               </div>
-              <div className="col">
+              <div className={styles.col}>
                 <img src="/react-weather-app/Images/wind.png" alt="" />
-                <div className="wind">
+                <div className={styles.wind}>
                   <p>{Math.round(data.speed)} km/h</p>
                   <p>Wind</p>
                 </div>

@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
-  font-family: 'PT Sans Narrow', sans-serif;
-font-family: 'Urbanist', sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Urbanist", sans-serif;
 }
 
 html {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 body {
   margin: 0;
   background-color: #3f3f3f;
 }
-
