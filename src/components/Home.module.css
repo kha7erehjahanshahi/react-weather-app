@@ -3,7 +3,7 @@
 }
 
 .weather {
-    @apply w-96 p-4 rounded-lg m-2 mx-auto bg-gradient-to-r from-[rgb(38,38,62)] to-[rgb(132,132,163)] text-center;
+    @apply w-96 p-4 rounded-lg m-2 mx-auto bg-gradient-to-br from-[rgb(38,38,62)] to-[rgb(132,132,163)] text-center;
 }
 
 .search {
@@ -11,31 +11,35 @@
 }
 
 .search input {
-    @apply border-0 outline-none px-8 py-2 text-lg bg-[rb(222,237,243)] text-black rounded-lg flex-1 mr-4;
+    @apply border-0 outline-none px-5 py-2 text-lg bg-[rb(222,237,243)] text-black rounded-3xl flex-1 mr-2;
 }
 
 .search button {
-    @apply border-0 outline-none w-10 h-10 rounded-full cursor-pointer;
+    @apply border-0 outline-none w-10 h-10 rounded-full cursor-pointer bg-white;
 }
 
 .search button img {
-    @apply w-20;
+    @apply w-6 h-6 block mx-auto;
 }
 
-.weather-info img {
+.weather_info {
+    @apply flex flex-col items-center justify-center;
+}
+
+.weather_info img {
     @apply w-64 h-64;
 }
 
-.weather-info h1 {
+.weather_info h1 {
     @apply text-7xl font-medium mt-5 text-[aliceblue];
 }
 
-.weather-info h2 {
-    @apply text-[aliceblue] text-5xl font-normal -mt-5;
+.weather_info h2 {
+    @apply text-[aliceblue] text-3xl font-normal;
 }
 
 .details {
-    @apply flex items-center justify-between px-6 mt-8 text-white;
+    @apply flex items-center justify-between mt-8 text-white w-full px-10;
 }
 .details .col {
     @apply flex items-center text-left;

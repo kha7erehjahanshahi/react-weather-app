@@ -3,6 +3,8 @@ import Header from "./Header";
 import styles from "./Home.module.css";
 import getWeather from "./api";
 
+console.log(styles)
+
 function Home() {
   const [data, setData] = useState({
     celcius: 10,
