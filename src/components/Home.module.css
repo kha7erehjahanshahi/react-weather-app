@@ -1,9 +1,9 @@
 .container {
-    @apply w-full h-screen pt-12 bg-gray-800	font-serif;	
+    @apply w-full h-screen pt-12 bg-gray-800 font-serif;
 }
 
 .weather {
-    @apply w-96 p-4 rounded-lg m-2 mx-auto bg-gradient-to-br from-[rgb(38,38,62)] to-[rgb(132,132,163)] text-center;
+    @apply w-96 p-4 rounded-lg m-2 mx-auto bg-gradient-to-br from-surface-dark to-surface text-center;
 }
 
 .search {
@@ -11,7 +11,7 @@
 }
 
 .search input {
-    @apply border-0 outline-none px-5 py-2 text-lg bg-[rb(222,237,243)] text-black rounded-3xl flex-1 mr-2;
+    @apply border-0 outline-none px-5 py-2 text-lg bg-surface-light text-black rounded-3xl flex-1 mr-2;
 }
 
 .search button {
@@ -31,11 +31,11 @@
 }
 
 .weather_info h1 {
-    @apply text-7xl font-medium mt-5 text-[aliceblue];
+    @apply text-7xl font-medium mt-5 text-primary-100;
 }
 
 .weather_info h2 {
-    @apply text-[aliceblue] text-3xl font-normal;
+    @apply text-primary-100 text-3xl font-normal;
 }
 
 .details {
