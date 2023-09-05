@@ -11,3 +11,4 @@ export const dataAtom = atom({
   speed: 2,
   image: 'clouds',
 });
+export const showSidebarAtom = atom(false);

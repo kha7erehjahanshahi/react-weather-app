@@ -2,7 +2,7 @@ import getWeather from '../utils/api';
 import Header from './Header';
 import styles from './Home.module.css';
 import { useAtom } from 'jotai';
-import { dataAtom, historyAtom, nameAtom } from '../utils/atoms';
+import { dataAtom, historyAtom, nameAtom, showSidebarAtom } from '../utils/atoms';
 import { Search } from './Search';
 import { Sidebar } from './Sidebar';
 import { Weather } from './Weather';
@@ -11,6 +11,7 @@ function Home() {
   const [data, setData] = useAtom(dataAtom);
   const [history, setHistory] = useAtom(historyAtom);
   const [name, setName] = useAtom(nameAtom);
+  const [showSidebar] = useAtom(showSidebarAtom);
 
   const getData = (cityName) => {
     getWeather(cityName)
@@ -55,7 +56,7 @@ function Home() {
             <Search name={name} setName={setName} onSubmit={handleClick} />
             <Weather data={data} />
           </div>
-          <Sidebar onClick={loadCity} />
+          {showSidebar && <Sidebar onClick={loadCity} />}
         </div>
       </div>
     </>
