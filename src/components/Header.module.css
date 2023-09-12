@@ -4,7 +4,7 @@
   align-items: center;
   gap: 5px;
   padding-bottom: 30px; */
-  @apply flex justify-start items-center gap-[5px] pb-[30px];
+  @apply flex items-center gap-[5px] pb-[30px];
 }
 
 .header_container img {
@@ -16,4 +16,12 @@
   /* font-size: 20px;
   color: #ffffff; */
   @apply text-xl text-white;
+}
+
+.menu_button {
+  @apply ml-auto;
+}
+
+.menu_button img {
+  @apply w-6 h-6;
 }

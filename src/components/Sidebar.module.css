@@ -1,0 +1,15 @@
+.sidebar {
+  @apply flex-1 my-2 rounded-md border border-gray-500 p-4 text-white flex flex-col bg-gray-900;
+}
+
+.sidebar_box {
+  @apply flex-1;
+}
+
+.sidebar h4 {
+  @apply text-xl border-b border-gray-500 pb-2 mb-2;
+}
+
+.sidebar li {
+  @apply flex justify-between items-center;
+}
