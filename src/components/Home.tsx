@@ -1,3 +1,5 @@
+
+import React from 'react';
 import getWeather from '../utils/api';
 import Header from './Header';
 import styles from './Home.module.css';
@@ -7,25 +9,45 @@ import { Search } from './Search';
 import { Sidebar } from './Sidebar';
 import { Weather } from './Weather';
 
+
+
+interface WeatherData {
+  celcius: number;
+  name: string;
+  humidity: number;
+  speed: number;
+  image: string;
+}
+
 function Home() {
   const [data, setData] = useAtom(dataAtom);
-  const [history, setHistory] = useAtom(historyAtom);
+  const [, setHistory] = useAtom(historyAtom);
   const [name, setName] = useAtom(nameAtom);
   const [showSidebar] = useAtom(showSidebarAtom);
+  
 
-  const getData = (cityName) => {
+  
+  
+
+  const getData = (
+    cityName: string,
+    setData: React.Dispatch<React.SetStateAction<WeatherData>>,
+    setHistory: React.Dispatch<React.SetStateAction<string[]>>,
+    setName: React.Dispatch<React.SetStateAction<string>>
+    ) => {
+      
     getWeather(cityName)
-      .then((weatherData) => {
+      .then((weatherData: WeatherData) => {
         setData({
           ...data,
-          celcius: weatherData.main.temp,
+          celcius:  weatherData.celcius,
           name: weatherData.name,
-          humidity: weatherData.main.humidity,
-          speed: weatherData.wind.speed,
-          image: weatherData.weather[0].main.toLowerCase(),
+          humidity: weatherData.humidity,
+          speed: weatherData.speed,
+          image: weatherData.image,
         });
         if (!history.includes(weatherData.name)) {
-          setHistory((prev) => [...prev, weatherData.name]);
+          setHistory((prev: any) => [...prev, weatherData.name]);
         }
         setName('');
       })
@@ -39,12 +61,12 @@ function Home() {
       return;
     }
 
-    getData(name);
+    getData(name, setData, setHistory, setName);
   };
 
-  const loadCity = (city) => {
+  const loadCity = (city: string) => {
     setName('');
-    getData(city);
+    getData(city, setData, setHistory, setName);
   };
 
   return (

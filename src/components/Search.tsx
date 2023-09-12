@@ -1,6 +1,14 @@
 import styles from './Search.module.css';
+import React from 'react';
 
-export function Search({ name, setName, onSubmit }) {
+
+interface SearchProps {
+  name: string;
+  setName: React.Dispatch<React.SetStateAction<string>>;
+  onSubmit: () => void;
+}
+
+export function Search({ name, setName, onSubmit }: SearchProps) {
   return (
     <div className={styles.search}>
       <input
