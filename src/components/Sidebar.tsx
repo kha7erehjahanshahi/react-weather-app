@@ -1,6 +1,5 @@
-import React from 'react';
 import { useAtom } from 'jotai';
-import styles from './Sidebar.module.css';
+import './Sidebar.css';
 import { favoritesAtom, historyAtom } from '../utils/atoms';
 
 interface SidebarProps {
@@ -16,8 +15,8 @@ export function Sidebar({ onClick }: SidebarProps) {
   };
 
   return (
-    <div className={styles.sidebar}>
-      <div className={styles.sidebar_box}>
+    <div className={`sidebar`}>
+      <div className={`sidebar_box`}>
         <h4>Favorites:</h4>
         {favorites.length > 0 ? (
           <ul>
@@ -34,7 +33,7 @@ export function Sidebar({ onClick }: SidebarProps) {
           <p>No favorites yet</p>
         )}
       </div>
-      <div className={styles.sidebar_box}>
+      <div className={`sidebar_box`}>
         <h4>History:</h4>
         {history.length > 0 ? (
           <ul>

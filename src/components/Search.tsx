@@ -1,4 +1,4 @@
-import styles from './Search.module.css';
+import './Search.css';
 import React from 'react';
 
 
@@ -10,7 +10,7 @@ interface SearchProps {
 
 export function Search({ name, setName, onSubmit }: SearchProps) {
   return (
-    <div className={styles.search}>
+    <div className={'search'}>
       <input
         type="text"
         placeholder="Enter City Name"
@@ -18,7 +18,7 @@ export function Search({ name, setName, onSubmit }: SearchProps) {
         onChange={(e) => setName(e.target.value)}
       />
       <button>
-        <img src="/react-weather-app/Images/search.png" onClick={onSubmit} alt="" />
+        <img src="/Images/search.png" onClick={onSubmit} alt="" />
       </button>
     </div>
   );

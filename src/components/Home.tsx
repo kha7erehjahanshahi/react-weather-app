@@ -2,7 +2,7 @@
 import React from 'react';
 import getWeather from '../utils/api';
 import Header from './Header';
-import styles from './Home.module.css';
+import './Home.css';
 import { useAtom } from 'jotai';
 import { dataAtom, historyAtom, nameAtom, showSidebarAtom } from '../utils/atoms';
 import { Search } from './Search';
@@ -71,9 +71,9 @@ function Home() {
 
   return (
     <>
-      <div className={styles.container}>
-        <div className={styles.app}>
-          <div className={styles.weather}>
+      <div className={'container'}>
+        <div className={'app'}>
+          <div className={'weather'}>
             <Header />
             <Search name={name} setName={setName} onSubmit={handleClick} />
             <Weather data={data} />
