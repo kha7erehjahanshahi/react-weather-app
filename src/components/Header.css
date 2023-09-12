@@ -3,7 +3,7 @@
 }
 
 .header_container img {
-  @apply w-2.5 h-2.5;
+  @apply w-10 h-10;
 }
 .header_title {
   @apply text-xl text-white;
