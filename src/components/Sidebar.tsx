@@ -1,12 +1,17 @@
+import React from 'react';
 import { useAtom } from 'jotai';
 import styles from './Sidebar.module.css';
 import { favoritesAtom, historyAtom } from '../utils/atoms';
 
-export function Sidebar({ onClick }) {
+interface SidebarProps {
+  onClick: (item: string) => void;
+}
+
+export function Sidebar({ onClick }: SidebarProps) {
   const [history] = useAtom(historyAtom);
   const [favorites, setFavorites] = useAtom(favoritesAtom);
 
-  const removeFavorite = (favorite) => {
+  const removeFavorite = (favorite: string) => {
     setFavorites((prev) => prev.filter((item) => item !== favorite));
   };
 
